@@ -1,10 +1,10 @@
 package com.flyco.pageindicator.anim.select;
 
+import android.animation.ObjectAnimator;
 import android.view.View;
 
 import com.flyco.pageindicator.anim.base.IndicatorBaseAnimator;
-import com.nineoldandroids.animation.Animator;
-import com.nineoldandroids.animation.ObjectAnimator;
+
 
 public class RotateEnter extends IndicatorBaseAnimator {
     public RotateEnter() {
@@ -12,7 +12,6 @@ public class RotateEnter extends IndicatorBaseAnimator {
     }
 
     public void setAnimation(View view) {
-        this.animatorSet.playTogether(new Animator[]{
-                ObjectAnimator.ofFloat(view, "rotation", 0, 180)});
+        this.animatorSet.playTogether(ObjectAnimator.ofFloat(view, "rotation", 0, 180));
     }
 }

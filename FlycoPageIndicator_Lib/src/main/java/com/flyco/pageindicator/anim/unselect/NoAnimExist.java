@@ -1,10 +1,10 @@
 package com.flyco.pageindicator.anim.unselect;
 
+import android.animation.Animator;
+import android.animation.ObjectAnimator;
 import android.view.View;
 
 import com.flyco.pageindicator.anim.base.IndicatorBaseAnimator;
-import com.nineoldandroids.animation.Animator;
-import com.nineoldandroids.animation.ObjectAnimator;
 
 public class NoAnimExist extends IndicatorBaseAnimator {
     public NoAnimExist() {

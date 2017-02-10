@@ -7,6 +7,7 @@ import android.graphics.drawable.Drawable;
 import android.graphics.drawable.GradientDrawable;
 import android.os.Bundle;
 import android.os.Parcelable;
+import android.support.v4.view.ViewCompat;
 import android.support.v4.view.ViewPager;
 import android.util.AttributeSet;
 import android.view.Gravity;
@@ -19,7 +20,6 @@ import android.widget.RelativeLayout;
 import com.flyco.pageindicator.R;
 import com.flyco.pageindicator.anim.base.IndicatorBaseAnimator;
 import com.flyco.pageindicator.indicator.base.PageIndicator;
-import com.nineoldandroids.view.ViewHelper;
 
 import java.util.ArrayList;
 
@@ -224,7 +224,8 @@ public class FlycoPageIndicaor extends LinearLayout implements PageIndicator {
             this.currentItem = position;
 
             float tranlationX = (indicatorWidth + indicatorGap) * (currentItem + positionOffset);
-            ViewHelper.setTranslationX(selectView, tranlationX);
+            // ViewHelper.setTranslationX(selectView, tranlationX);
+            ViewCompat.setTranslationX(selectView, tranlationX);
 
 //            RelativeLayout.LayoutParams lp = new  RelativeLayout.LayoutParams(indicatorWidth,
 //                    indicatorHeight);

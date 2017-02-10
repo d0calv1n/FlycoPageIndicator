@@ -1,11 +1,10 @@
 package com.flyco.pageindicator.anim.base;
 
+import android.animation.Animator;
+import android.animation.AnimatorSet;
+import android.support.v4.view.ViewCompat;
 import android.view.View;
 import android.view.animation.Interpolator;
-
-import com.nineoldandroids.animation.Animator;
-import com.nineoldandroids.animation.AnimatorSet;
-import com.nineoldandroids.view.ViewHelper;
 
 public abstract class IndicatorBaseAnimator {
     protected long duration = 200;
@@ -58,14 +57,14 @@ public abstract class IndicatorBaseAnimator {
     }
 
     public static void reset(View view) {
-        ViewHelper.setAlpha(view, 1);
-        ViewHelper.setScaleX(view, 1);
-        ViewHelper.setScaleY(view, 1);
-        ViewHelper.setTranslationX(view, 0);
-        ViewHelper.setTranslationY(view, 0);
-        ViewHelper.setRotation(view, 0);
-        ViewHelper.setRotationY(view, 0);
-        ViewHelper.setRotationX(view, 0);
+        ViewCompat.setAlpha(view, 1);
+        ViewCompat.setScaleX(view, 1);
+        ViewCompat.setScaleY(view, 1);
+        ViewCompat.setTranslationX(view, 0);
+        ViewCompat.setTranslationY(view, 0);
+        ViewCompat.setRotation(view, 0);
+        ViewCompat.setRotationY(view, 0);
+        ViewCompat.setRotationX(view, 0);
     }
 
     public IndicatorBaseAnimator duration(long duration) {

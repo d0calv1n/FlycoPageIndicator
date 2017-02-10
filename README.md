@@ -9,11 +9,23 @@ A Page Indicator Lib is realized in a different way. Support for Android 2.2 and
 
 ##Gradle
 
+module gradle config
+
+```groovy
+allprojects {
+		repositories {
+			...
+			maven { url "https://jitpack.io" }
+		}
+	}
+```
+
+add dependencies
+
 ```groovy
 dependencies{
-    compile 'com.android.support:support-v4:22.2.1'
-    compile 'com.nineoldandroids:library:2.4.0'
-     compile 'com.flyco.pageindicator:FlycoPageIndicator_Lib:1.0.0@aar'
+    compile 'com.android.support:support-v4:$version'
+    compile 'com.flyco.pageindicator:FlycoPageIndicator_Lib:1.0.0@aar'
 }
 ```
 
